@@ -1,6 +1,5 @@
 import type { AxiosInstance, AxiosResponse } from "axios";
 import axios from "axios";
-import type { FilterParams } from "~/types/filter.type";
 
 const API = ({ headers = {}, params = {} } = {}): AxiosInstance => {
   const instanse = axios.create({
