@@ -16,8 +16,8 @@ const API = ({ headers = {}, params = {} } = {}): AxiosInstance => {
 };
 
 const ArticleServices = {
-  getArticles: (params: FilterParams): Promise<AxiosResponse> => {
-    return API({ params }).get("/v2/top-headlines");
+  getArticles: (): Promise<AxiosResponse> => {
+    return API().get("/articles");
   },
 };
 

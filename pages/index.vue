@@ -15,12 +15,9 @@ const news = ref<Articles[]>([]);
 const getNews = async () => {
   try {
     userStore.isLoading = true;
-    const { data } = await ArticleServices.getArticles({
-      apiKey: runTimeConfig.public.apiKey ?? "",
-      country: "us",
-    });
+    const { data } = await ArticleServices.getArticles();
 
-    news.value = data.articles;
+    news.value = data;
   } catch (error) {
     console.error(error);
   } finally {
