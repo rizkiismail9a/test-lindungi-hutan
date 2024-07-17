@@ -1,3 +1,15 @@
+<script setup lang="ts">
+useHead({
+  title: "About",
+  meta: [
+    {
+      name: "description",
+      content: "About article pages",
+    },
+  ],
+});
+</script>
+
 <template>
   <h1>Who are we?!</h1>
   <p>

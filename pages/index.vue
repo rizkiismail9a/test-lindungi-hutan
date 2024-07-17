@@ -2,7 +2,6 @@
 import ArticleServices from "~/services/article.services";
 import type { Articles } from "~/types/news.type";
 
-const runTimeConfig = useRuntimeConfig();
 const userStore = useUserStore();
 
 onMounted(() => {
@@ -27,6 +26,12 @@ const getNews = async () => {
 
 useHead({
   title: "Home",
+  meta: [
+    {
+      name: "description",
+      content: "What happen with the world?",
+    },
+  ],
 });
 </script>
 <template>
